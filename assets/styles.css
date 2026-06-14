@@ -1,0 +1,422 @@
+/* =====================================================
+   GLOBAL APP STYLING
+===================================================== */
+
+html, body, [class*="css"] {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Keep page switches crisp: no stale ghost/fade effect while Streamlit reruns. */
+.stApp,
+.stApp *,
+[data-testid="stAppViewContainer"],
+[data-testid="stAppViewContainer"] *,
+[data-testid="stVerticalBlock"],
+[data-testid="stVerticalBlock"] * {
+    transition: none !important;
+}
+
+.staleElement,
+[class*="stale"] {
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+/* Main App Background */
+.stApp {
+    background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
+    color: white;
+}
+
+/* Remove Streamlit Default UI */
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+[data-testid="stSidebar"] {
+    display: none;
+}
+
+[data-testid="collapsedControl"] {
+    display: none;
+}
+
+/* Main Container */
+.block-container {
+    padding-top: 1rem !important;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    max-width: 100%;
+    width: 100%;
+    overflow: visible !important;
+    padding-bottom: 2rem;
+}
+
+div[data-testid="stVerticalBlock"] {
+    gap: 0.3rem !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0.2rem 0 !important;
+}
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero-container {
+
+    background: linear-gradient(
+        135deg,
+        rgba(14,165,233,0.15),
+        rgba(99,102,241,0.15)
+    );
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 24px;
+
+    padding: 2rem;
+
+    margin-bottom: 0.8rem;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.hero-title {
+
+    font-size: 3rem;
+
+    font-weight: 800;
+
+    color: #ffffff;
+
+    margin-bottom: 1rem;
+
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+
+    font-size: 1.2rem;
+
+    color: #cbd5e1;
+
+    line-height: 1.8;
+}
+
+/* =====================================================
+   METRIC CARDS
+===================================================== */
+
+.metric-card {
+
+    background:#1E293B;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 20px;
+
+    padding: 1.5rem;
+
+    text-align: center;
+
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+
+    margin-bottom: 0.4rem;
+}
+
+.metric-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.metric-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.metric-value {
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    color: #38bdf8;
+}
+
+.metric-label {
+
+    font-size: 0.95rem;
+
+    color: #cbd5e1;
+}
+
+/* =====================================================
+   FEATURE CARDS
+===================================================== */
+
+.feature-card {
+
+    background:#1E293B;
+
+    border-radius: 18px;
+
+    padding: 1.5rem;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+
+    margin-bottom: 0.4rem;
+
+    min-height: 160px;
+}
+
+.feature-card:hover {
+
+    transform: scale(1.03);
+
+    border-color: #38bdf8;
+}
+
+.feature-title {
+
+    font-size: 1.2rem;
+
+    font-weight: 600;
+
+    color: white;
+
+    margin-bottom: 0.5rem;
+}
+
+.feature-desc {
+
+    color: #cbd5e1;
+
+    line-height: 1.6;
+}
+
+/* =====================================================
+   CTA BOX
+===================================================== */
+
+.cta-box {
+
+    background: linear-gradient(135deg, #0ea5e9, #6366f1);
+
+    padding: 2rem;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    color: white;
+
+    margin-top: 2rem;
+
+    box-shadow: none;
+}
+
+.cta-title {
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    margin-bottom: 0.5rem;
+}
+
+.cta-text {
+
+    font-size: 1.05rem;
+
+    opacity: 0.95;
+}
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+div[data-testid="stTextInput"] input,
+div[data-testid="stNumberInput"] input {
+
+    border-radius: 12px !important;
+
+    border: 1px solid rgba(255,255,255,0.12) !important;
+
+    background: rgba(255,255,255,0.08) !important;
+
+    color: black !important;
+
+    padding: 12px !important;
+
+    font-size: 15px !important;
+}
+
+div[data-testid="stTextInput"] input:focus,
+div[data-testid="stNumberInput"] input:focus {
+
+    border-color: #38bdf8 !important;
+
+    box-shadow: none;
+}
+
+/* Labels */
+[data-testid="stWidgetLabel"] p {
+
+    color: #e2e8f0 !important;
+
+    font-weight: 600 !important;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+div[data-testid="stButton"] button,
+div[data-testid="stFormSubmitButton"] button {
+
+    width: 100%;
+
+    border-radius: 12px;
+
+    border: none;
+
+    padding: 0.75rem 1rem;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: white !important;
+
+    background: linear-gradient(135deg, #0EA5E9, #2563EB);
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+div[data-testid="stButton"] button:hover,
+div[data-testid="stFormSubmitButton"] button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* =====================================================
+   DOWNLOAD BUTTONS
+===================================================== */
+
+div[data-testid="stDownloadButton"] button {
+
+    width: 100%;
+
+    height: 55px;
+
+    border-radius: 12px;
+
+    border: none;
+
+    background: linear-gradient(135deg, #10B981, #059669);
+
+    color: white !important;
+
+    font-weight: 600;
+
+}
+
+div[data-testid="stDownloadButton"] button:hover {
+
+    transform: translateY(-2px);
+
+    background: linear-gradient(135deg, #059669, #047857);
+}
+
+.st-emotion-cache-0.e1wr3kle1 {
+    justify-items: center !important;
+}
+
+.st-emotion-cache-1q82h82 {
+    color: #c2c9d1 !important;
+    font-size: 1.5rem !important;
+}
+
+.stHeading {
+    padding: 1rem !important;
+}
+
+.stHorizontalBlock.st-emotion-cache-1permvm.e1wguzas3 {
+    padding-top: 30px !important;
+}
+
+[data-testid="stWidgetLabel"] p{
+    color:#010408 !important;   /* Dark Gray */
+    font-size:15px !important;
+    font-weight:600 !important;
+    opacity:1 !important;
+}
+
+[data-testid="stDialog"] input, [data-testid="stDialog"] textarea
+{
+    background: #f1f3f7 !important;
+    color: #27002f !important;
+}
+
+.stButton.st-emotion-cache-8atqhb.e1mlolmg0
+{
+    padding-top: 20px;
+}
+
+.stHorizontalBlock.st-emotion-cache-1permvm.e1wguzas3 {
+    padding-top: 0px !important;
+}
+
+.st-key-book_ticket_btn button[data-testid="stBaseButton-secondary"]
+{
+    width: 20% !important;
+    height: 40px !important;
+}
+
+button.st-emotion-cache-5qfegl.etdmgzm7 {
+    width: 20% !important;
+    height: 40px !important;
+}
+
+.stButton.st-emotion-cache-8atqhb.e1mlolmg0
+ {
+    text-align-last: center !important;
+}
+.stElementContainer.element-container.st-key-FormSubmitter-customer_prediction_form-Predict-Customer-Segment.st-emotion-cache-1vo6xi6.e1wguzas1
+{
+    text-align: center !important;
+}
+
+div[data-testid="stTextInput"] label[data-testid="stWidgetLabel"] {
+
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+[data-testid="stWidgetLabel"] p {
+    color: #f4f4f4 !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+}
+
+.st-emotion-cache-1lsfsc6 {
+    background-color: rgb(51 67 98) !important;
+}
